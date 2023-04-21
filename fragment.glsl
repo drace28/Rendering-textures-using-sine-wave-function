@@ -4,7 +4,7 @@ layout(location = 0) out vec4 fragColor;
 uniform vec2 u_resolution;
 uniform float u_time;
 
-const float EPSILON = 0.002;
+const float EPSILON = 0.003;
 const float MAX_DIST = 1800.0;
 const float STEPS = 580.0;
 const float PI = acos(-1.0);
