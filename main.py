@@ -2,7 +2,6 @@ import pygame as pg
 import moderngl as mgl
 import struct
 import sys
-
 class App:
     def __init__(self, win_size=(1600, 900)):
         # opengl context
