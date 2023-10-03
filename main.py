@@ -37,7 +37,7 @@ class App:
         pg.display.flip()
 
     def update(self):
-        self.set_uniform('u_time', pg.time.get_ticks() * 0.001)
+        self.set_uniform('u_time', pg.time.get_ticks() * 0.0009)
 
     def run(self):
         while True:
