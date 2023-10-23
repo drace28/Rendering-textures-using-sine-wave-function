@@ -4,7 +4,6 @@ import struct
 import sys
 
 class App:
-    
     def __init__(self, win_size=(1600, 900)):
         # opengl context
         pg.display.set_mode(win_size, flags=pg.OPENGL | pg.DOUBLEBUF)
