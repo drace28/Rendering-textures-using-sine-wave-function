@@ -2,6 +2,7 @@ import pygame as pg
 import moderngl as mgl
 import struct
 import sys
+
 class App:
     def __init__(self, win_size=(1600, 900)):
         # opengl context
@@ -12,9 +13,9 @@ class App:
         self.clock = pg.time.Clock()
 
         # load shaders
-        with open('programs/vertex.glsl') as f:
+        with open("Rendering-textures-using-sine-wave-function/vertex.glsl") as f:
             vertex = f.read()
-        with open('programs/fragment.glsl') as f:
+        with open("Rendering-textures-using-sine-wave-function/fragment.glsl") as f:
             fragment = f.read()
         self.program = self.ctx.program(vertex_shader=vertex, fragment_shader=fragment)
 
@@ -65,6 +66,7 @@ class App:
                 self.destroy()
                 pg.quit()
                 sys.exit()
+    
 
 
 if __name__ == '__main__':
