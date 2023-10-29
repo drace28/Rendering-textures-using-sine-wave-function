@@ -1,9 +1,10 @@
+#version 330
 layout(location = 0) out vec4 fragColor;
 
 uniform vec2 u_resolution;
 uniform float u_time;
 
-const float EPSILON = 0.003;
+const float EPSILON = 0.001;
 const float MAX_DIST = 1800.0;
 const float STEPS = 580.0;
 const float PI = acos(-1.0);
@@ -13,7 +14,6 @@ const int NUM_OCTAVES = 7;
 float noise(vec2 p) {
     return sin(p[0]) + sin(p[1]);
 }
-
 
 
 mat2 rot(float a) {
@@ -38,7 +38,7 @@ float fbm(vec2 p) {
 
 float getWater(vec3 p) {
     float d = p.y + 5.0 * sin(u_time) + 80.0;
-    d += 6.0 * noise(p.xz * 0.04 + 1.0 * u_time);
+    d += 6.0 * noise(p.xz * 0.02 + 1.0 * u_time);
     return d;
 }
 
@@ -46,7 +46,7 @@ float getWater(vec3 p) {
 float getTerrain(vec3 p) {
     float d = 0;
     d -= 130.0 * noise(p.xz * 0.002);
-    d += 80.0 * noise(p.xz * 0.015) + 0.0;
+    d += 80.0 * noise(p.xz * 0.01) + 80.0;
     d += 20.0 * fbm(p.xz * 0.1) * noise(p.xz * 0.01) + 20.0;
     d -= 2.0 * sin(0.6 * d);
     d += p.y + 2.0;
@@ -174,17 +174,3 @@ void main() {
 
     fragColor = vec4(pow(color, vec3(1.5)), 1.0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
