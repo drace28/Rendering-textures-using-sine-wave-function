@@ -93,7 +93,7 @@ class App:
             self.check_events()
             self.update()
             self.render()
-            self.clock.tick(60)  # Limit the frame rate to 60 FPS
+            self.clock.tick(120)  
             fps = self.clock.get_fps()
             pg.display.set_caption(f'{fps :.1f}')
 
