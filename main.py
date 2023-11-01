@@ -60,7 +60,7 @@ class App:
         # Time objects
         self.clock = pg.time.Clock()
 
-        # Load shaders (Make sure file paths are correct)
+        # Load shaders 
         with open("vertex.glsl") as f:
             vertex = f.read()
         with open("fragment.glsl") as f:
@@ -79,7 +79,7 @@ class App:
 
         # Uniforms
         self.set_uniform('u_resolution', win_size)
-        
+
 
     def render(self):
         self.ctx.clear()
