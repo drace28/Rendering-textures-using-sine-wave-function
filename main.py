@@ -79,6 +79,7 @@ class App:
 
         # Uniforms
         self.set_uniform('u_resolution', win_size)
+        
 
     def render(self):
         self.ctx.clear()
