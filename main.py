@@ -60,7 +60,7 @@ class App:
         # Time objects
         self.clock = pg.time.Clock()
 
-        # Load shaders 
+        # Load shaders rty
         with open("vertex.glsl") as f:
             vertex = f.read()
         with open("fragment.glsl") as f:
