@@ -46,7 +46,7 @@ class Quad(pg.sprite.Sprite):
         self.program.use()
         pg.gl.glDrawArrays(pg.gl.GL_TRIANGLES, 0, len(self.vertices))
 class App:
-    def __init__(self, win_size=(1600, 900)):
+    def __init__(self, win_size=(1600, 1200)):
         # Initialize Pygame
         pg.init()
         
