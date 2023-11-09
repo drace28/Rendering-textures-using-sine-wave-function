@@ -3,6 +3,7 @@ import moderngl as mgl
 import struct
 import sys
 
+
 class Quad(pg.sprite.Sprite):
     def __init__(self, win_size):
         super().__init__()
