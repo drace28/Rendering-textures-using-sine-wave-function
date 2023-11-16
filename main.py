@@ -7,7 +7,7 @@ class Quad(pg.sprite.Sprite):
         super().__init__()
         self.image = pg.Surface(win_size, pg.SRCALPHA)
         self.rect = self.image.get_rect()
-        self.rect.center = win_size[1] // 2, win_size[1] // 2
+        self.rect.center = win_size[0] // 2, win_size[1] // 2
 
         # Quad vertices
         self.vertices = [(-1, -1), (1, -1), (1, 1), (-1, 1), (-1, -1), (1, 1)]
